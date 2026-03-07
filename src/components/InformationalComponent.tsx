@@ -1,68 +1,58 @@
 
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 
+
+function TechItem({ name }: { name: string }) {
+   return (
+
+      <View style={styles.techItem}>
+         <Text style={styles.toolLable}>Tool Icon</Text>
+         <Text style={styles.toolName}>{name}</Text>
+
+      </View>
+
+
+   );
+
+}
+
 export default function InformationalComponent() {
 
    return (
       <ScrollView>
 
-      <View style={styles.container}>
+         <View style={styles.container}>
 
-         <Text style={styles.title}>Learn What you Want</Text>
-         <Text style={styles.description}>In this program you we leam murpe languoyes ane
-            tools that you will have under your belt. But afterwards you choose want you really want to pursue.
-            With your practicum program you will learn and strengthen your desired skills
-            by building real applications to use in the real world.
-         </Text>
+            <Text style={styles.title}>Learn What you Want</Text>
+            <Text style={styles.description}>In this program you will learn multiple languages and tools that you will have under your belt.
+               Afterwards, you can choose what you really want to pursue. With your practicum program you will
+               learn and strengthen your desired skills by building real applications to use in the real world.
+            </Text>
 
-         <View style={styles.grid}>
-            <View style={styles.techItem}>
-               <Text style={styles.toolLable}>Tool Icon</Text>
-               <Text style={styles.toolName}>Java{"\n"}Script</Text>
+            <View style={styles.grid}>
+               <TechItem name={"Java\nScript"} />
+               <TechItem name={"Figma"} />
+               <TechItem name={"SQL"} />
+               <TechItem name={"Git\nHub"} />
+               <TechItem name={"Mongo\nDB"} />
+               <TechItem name={"Type\nScript"} />
+
             </View>
 
-            <View style={styles.techItem}>
-               <Text style={styles.toolLable}>Tool Icon</Text>
-               <Text style={styles.toolName}>Figma</Text>
-            </View>
 
-            <View style={styles.techItem}>
-               <Text style={styles.toolLable}>Tool Icon</Text>
-               <Text style={styles.toolName}>SQL</Text>
-            </View>
+            <Text style={styles.subtitle}> Pursue your passions</Text>
+            <Text style={styles.paragraph}>Not interested in the real world projects with clients.
+               Then you can build your own passion project. You will have a academic
+               support and faculty to aid you In learning the necessary skills in building and expanding your skil set.
+               Build what you are passionate about.</Text>
 
-            <View style={styles.techItem}>
-               <Text style={styles.toolLable}>Tool Icon</Text>
-               <Text style={styles.toolName}>Git{"\n"}Hub</Text>
-            </View>
+            <View style={styles.imageBox}>
+               <Text>marketing image</Text>
 
-            <View style={styles.techItem}>
-               <Text style={styles.toolLable}>Tool Icon</Text>
-               <Text style={styles.toolName}>Mongo{"\n"}DB</Text>
-            </View>
 
-            <View style={styles.techItem}>
-
-               <Text style={styles.toolLable}>Tool Icon</Text>
-               <Text style={styles.toolName}>Type{"\n"}Sript</Text>
             </View>
 
          </View>
-
-
-         <Text style={styles.subtitle}> Pursue your passions</Text>
-         <Text style={styles.paragraph}>Not interested in the real world projects with clients.
-            Then you can build your own passion project. You will have a academic
-            support and faculty to aid you In learning the necessary skills in building and expanding your skil set.
-            Build what you are passionate about.</Text>
-
-         <View style={styles.imageBox}>
-            <Text>marketing image</Text>
-
-
-         </View>
-
-      </View>
       </ScrollView>
    );
 
@@ -159,8 +149,8 @@ const styles = StyleSheet.create({
    },
 
    tech: {
-      
-     
+
+
       marginBottom: 15,
       textAlign: "center",
 
